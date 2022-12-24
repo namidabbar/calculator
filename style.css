@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #0D324D;
+    font-size: 20px;
+    color: white;
+}
+#container{
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #DEF6CA;
+    padding: 50px;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+#display, #operators, #numbers{
+align-self: center;}
+
+button{
+    padding: 20px;
+    width: 90px;
+    background-color: #F8BDC4;
+    color: #7B0828;
+    font-weight: bolder;
+    border-radius: 20px;border-style: dashed;
+    border-color: #7B0828;
+
+}
+#display{
+    background-color: #A1CDF1;
+    padding: 20px;
+    align-self: stretch;
+    border-radius: 20px;border-style: dashed;
+    border-color: #7B0828;
+}
