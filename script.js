@@ -17,12 +17,13 @@ numberbuttons.forEach((button) => {
     button.addEventListener('click', displayDigits);
   });
 
-let displayarray=[];
+let displaystring='';
 
 function displayDigits(){
-displayarray.push(this.id);
-console.log(displayarray);
-    display.innerHTML = displayarray.join(',');
+    let currentbutton=this.id;
+    console.log(currentbutton);
+    display.innerHTML = displaystring.concat(currentbutton);
+displaystring=displaystring.concat(currentbutton);
 }
 
 // adding eventListeners to the operator buttons
