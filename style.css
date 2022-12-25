@@ -15,7 +15,7 @@ body{
     border-radius: 30px;
 }
 
-#display, #operators, #numbers{
+#display, #operators, #numbers, #equalsClear{
 align-self: center;}
 
 button{
