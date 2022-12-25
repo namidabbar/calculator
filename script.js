@@ -10,16 +10,17 @@ const display=container.querySelector('#display')
 const operators=container.querySelector('#operators');
 const numbers=container.querySelector('#numbers');
 
-const buttons =numbers.querySelectorAll('button');
+const numberbuttons =numbers.querySelectorAll('button');
 
-buttons.forEach((button) => {
-
+numberbuttons.forEach((button) => {
     // and for each one we add a 'click' listener
     button.addEventListener('click', displayDigits);
   });
+
 let displayarray=new Array();
+
 function displayDigits(){
-displayarray.push[this.id];
+displayarray.push(this.id);
 console.log(displayarray);
-    display.innerHTML = this.id;
+    display.innerHTML = displayarray.join(',');
 }
