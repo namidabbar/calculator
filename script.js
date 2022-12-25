@@ -17,10 +17,22 @@ numberbuttons.forEach((button) => {
     button.addEventListener('click', displayDigits);
   });
 
-let displayarray=new Array();
+let displayarray=[];
 
 function displayDigits(){
 displayarray.push(this.id);
 console.log(displayarray);
     display.innerHTML = displayarray.join(',');
+}
+
+// adding eventListeners to the operator buttons
+
+const operatorbuttons=operators.querySelectorAll('button');
+operatorbuttons.forEach((button)=>{
+    button.addEventListener('click', displayOperator);
+});
+let chosenOpertator=[];
+function displayOperator(){
+chosenOpertator.push(this.id);
+display.innerHTML=chosenOpertator;
 }
