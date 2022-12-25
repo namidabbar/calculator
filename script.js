@@ -36,4 +36,24 @@ let chosenOpertator=[];
 function displayOperator(){
 chosenOpertator.push(this.id);
 display.innerHTML=chosenOpertator;
+if(chosenOpertator== '+'){
+    document.getElementById('-').disabled=true;
+        document.getElementById('*').disabled=true;
+        document.getElementById('/').disabled=true;
+}
+else if (chosenOpertator== '-'){
+    document.getElementById('+').disabled=true;
+        document.getElementById('*').disabled=true;
+        document.getElementById('/').disabled=true;
+}
+else if (chosenOpertator== '*'){
+    document.getElementById('+').disabled=true;
+        document.getElementById('-').disabled=true;
+        document.getElementById('/').disabled=true;
+}
+else if (chosenOpertator== '/'){
+    document.getElementById('+').disabled=true;
+        document.getElementById('-').disabled=true;
+        document.getElementById('*').disabled=true;
+}
 }
