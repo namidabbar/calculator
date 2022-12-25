@@ -30,12 +30,21 @@ displaystring=displaystring.concat(currentbutton);
 
 const operatorbuttons=operators.querySelectorAll('button');
 operatorbuttons.forEach((button)=>{
-    button.addEventListener('click', displayOperator);
+    button.addEventListener('click', storeOperator);
 });
-let chosenOpertator=[];
-function displayOperator(){
-chosenOpertator.push(this.id);
-display.innerHTML=chosenOpertator;
+
+let chosenOpertator='';
+let input1;
+
+function storeOperator(){
+     chosenOpertator=this.id;
+     input1=Number(displaystring);
+     //won't display the operator anymore
+     console.log(chosenOpertator);
+     console.log(input1);
+     displaystring='';
+    // displaystring=displaystring.concat(chosenOpertator);
+    //display.innerHTML=displaystring;
 if(chosenOpertator== '+'){
     document.getElementById('-').disabled=true;
         document.getElementById('*').disabled=true;
