@@ -24,6 +24,11 @@ function displayDigits(){
     console.log(currentbutton);
     display.innerHTML = displaystring.concat(currentbutton);
 displaystring=displaystring.concat(currentbutton);
+// the operator buttons will be enabled again
+        document.getElementById('+').disabled=false;
+        document.getElementById('-').disabled=false;
+        document.getElementById('*').disabled=false;
+        document.getElementById('/').disabled=false;
 }
 
 // adding eventListeners to the operator buttons
@@ -43,8 +48,7 @@ function storeOperator(){
      console.log(chosenOpertator);
      console.log(input1);
      displaystring='';
-    // displaystring=displaystring.concat(chosenOpertator);
-    //display.innerHTML=displaystring;
+    // the operator buttons get disableb after clicking on them
 if(chosenOpertator== '+'){
     document.getElementById('-').disabled=true;
         document.getElementById('*').disabled=true;
