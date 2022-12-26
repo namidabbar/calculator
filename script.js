@@ -103,11 +103,19 @@ else if(chosenOpertator== '*'){
              displaystring=answer;
              } 
 else if(chosenOpertator== '/'){
+    if(input2===0){
+        displaystring='';
+    input1='';
+    input2='';
+    chosenOpertator='';
+    display.innerHTML='SNAKE DETECTED!';
+    }
+    else{
                 let answer=divide(input1,input2);
                 console.log(answer);
                  display.innerHTML= answer;
                  displaystring=answer;
-                 } 
+                 } }
 }
 
 const clearButton=equalsCleardiv.lastElementChild;
