@@ -88,5 +88,24 @@ if(chosenOpertator== '+'){
    let answer=add(input1,input2);
    console.log(answer);
     display.innerHTML= answer;
+    displaystring=answer;
     }   
+else if(chosenOpertator== '-'){
+        let answer=subtract(input1,input2);
+        console.log(answer);
+         display.innerHTML= answer;
+         displaystring=answer;
+         } 
+else if(chosenOpertator== '*'){
+            let answer=multiply(input1,input2);
+            console.log(answer);
+             display.innerHTML= answer;
+             displaystring=answer;
+             } 
+else if(chosenOpertator== '/'){
+                let answer=divide(input1,input2);
+                console.log(answer);
+                 display.innerHTML= answer;
+                 displaystring=answer;
+                 } 
 }
