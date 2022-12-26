@@ -64,19 +64,19 @@ input2=Number(displaystring);
 console.log("equalsbuttonclicked")
 if(chosenOpertator== '+'){
    let answer=add(input1,input2);
-   console.log(answer);
+   answer=Math.round(answer * 100) / 100;
     display.innerHTML= answer;
     displaystring=answer;
     }   
 else if(chosenOpertator== '-'){
         let answer=subtract(input1,input2);
-        console.log(answer);
+        answer=Math.round(answer * 100) / 100;
          display.innerHTML= answer;
          displaystring=answer;
          } 
 else if(chosenOpertator== '*'){
             let answer=multiply(input1,input2);
-            console.log(answer);
+            answer=Math.round(answer * 100) / 100;
              display.innerHTML= answer;
              displaystring=answer;
              } 
@@ -90,6 +90,7 @@ else if(chosenOpertator== '/'){
     }
     else{
                 let answer=divide(input1,input2);
+                answer=Math.round(answer * 100) / 100;
                 console.log(answer);
                  display.innerHTML= answer;
                  displaystring=answer;
