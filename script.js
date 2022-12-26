@@ -25,10 +25,7 @@ function displayDigits(){
     display.innerHTML = displaystring.concat(currentbutton);
 displaystring=displaystring.concat(currentbutton);
 // the operator buttons will be enabled again
-        document.getElementById('+').disabled=false;
-        document.getElementById('-').disabled=false;
-        document.getElementById('*').disabled=false;
-        document.getElementById('/').disabled=false;
+        enableButtons();
 }
 
 // adding eventListeners to the operator buttons
@@ -51,26 +48,7 @@ function storeOperator(){
      displaystring='';
      display.innerHTML = displaystring;
     // the operator buttons get disableb after clicking on them
-if(chosenOpertator== '+'){
-    document.getElementById('-').disabled=true;
-        document.getElementById('*').disabled=true;
-        document.getElementById('/').disabled=true;
-}
-else if (chosenOpertator== '-'){
-    document.getElementById('+').disabled=true;
-        document.getElementById('*').disabled=true;
-        document.getElementById('/').disabled=true;
-}
-else if (chosenOpertator== '*'){
-    document.getElementById('+').disabled=true;
-        document.getElementById('-').disabled=true;
-        document.getElementById('/').disabled=true;
-}
-else if (chosenOpertator== '/'){
-    document.getElementById('+').disabled=true;
-        document.getElementById('-').disabled=true;
-        document.getElementById('*').disabled=true;
-}
+    disableButtons();
 }
 
 // adding eventListeners to the = button
@@ -128,4 +106,20 @@ function clear(){
     input2='';
     chosenOpertator='';
     display.innerHTML='';
+}
+
+function disableButtons(){
+        document.getElementById('+').disabled=true;
+        document.getElementById('-').disabled=true;
+        document.getElementById('*').disabled=true;
+        document.getElementById('/').disabled=true;
+        document.getElementById('=').disabled=true;
+}
+
+function enableButtons(){
+        document.getElementById('+').disabled=false;
+        document.getElementById('-').disabled=false;
+        document.getElementById('*').disabled=false;
+        document.getElementById('/').disabled=false;
+        document.getElementById('=').disabled=false;
 }
