@@ -3,7 +3,7 @@ let subtract=(a,b)=>a-b;
 let multiply=(a,b)=>a*b;
 let divide=(a,b)=>a/b;
 
-let operate=(operator,a,b)=>operator(a,b);
+
 
 const container = document.querySelector('#container');
 const display=container.querySelector('#display')
@@ -40,6 +40,7 @@ operatorbuttons.forEach((button)=>{
 
 let chosenOpertator='';
 let input1;
+let input2;
 
 function storeOperator(){
      chosenOpertator=this.id;
@@ -48,6 +49,7 @@ function storeOperator(){
      console.log(chosenOpertator);
      console.log(input1);
      displaystring='';
+     display.innerHTML = displaystring;
     // the operator buttons get disableb after clicking on them
 if(chosenOpertator== '+'){
     document.getElementById('-').disabled=true;
@@ -69,4 +71,22 @@ else if (chosenOpertator== '/'){
         document.getElementById('-').disabled=true;
         document.getElementById('*').disabled=true;
 }
+}
+
+// adding eventListeners to the = button
+const equalsCleardiv =container.querySelector('#equalsClear')
+
+const equalsbutton=equalsCleardiv.firstElementChild;
+
+equalsbutton.addEventListener('click',operate);
+
+
+function operate() {
+input2=Number(displaystring);
+console.log("equalsbuttonclicked")
+if(chosenOpertator== '+'){
+   let answer=add(input1,input2);
+   console.log(answer);
+    display.innerHTML= answer;
+    }   
 }
