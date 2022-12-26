@@ -109,3 +109,15 @@ else if(chosenOpertator== '/'){
                  displaystring=answer;
                  } 
 }
+
+const clearButton=equalsCleardiv.lastElementChild;
+
+clearButton.addEventListener('click',clear);
+
+function clear(){
+    displaystring='';
+    input1='';
+    input2='';
+    chosenOpertator='';
+    display.innerHTML='';
+}
