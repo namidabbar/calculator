@@ -15,7 +15,7 @@ body{
     border-radius: 30px;
 }
 
-#display, #operators, #numbers, #equalsClear{
+#display, #operators, #numbers, #equalsClear, #pad{
 align-self: center;
 display: flex;
 gap: 5px;}
@@ -47,11 +47,18 @@ button{
     flex-wrap: wrap;
 }
 #numbers>* {
-    flex: 1 1 120px;
+    flex: 1 1 90px;
 }
 #equalsClear>button{
     background-color: #60A561;
+    width: 200px;
 }
 #clear{
     background-color: #F8BDC4;
+}
+#pad{
+flex-direction: row;
+}
+#operators{
+    flex-direction: column;
 }
