@@ -23,12 +23,14 @@ gap: 5px;}
 button{
     padding: 20px;
     width: 90px;
-    background-color: #F8BDC4;
+    background-color: #F4D35E;
     color: #7B0828;
     font-weight: bolder;
     border-radius: 20px;border-style: dashed;
     border-color: #7B0828;
-
+}
+.digits{
+    background-color: #F8BDC4;
 }
 #display{
     background-color: #A1CDF1;
@@ -43,4 +45,10 @@ button{
 }
 #numbers>* {
     flex: 1 1 120px;
+}
+#equalsClear>button{
+    background-color: #60A561;
+}
+#clear{
+    background-color: #F8BDC4;
 }
