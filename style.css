@@ -38,6 +38,9 @@ button{
     align-self: stretch;
     border-radius: 20px;border-style: dashed;
     border-color: #7B0828;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    height: 30px;
 }
 
 #numbers{
