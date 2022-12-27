@@ -16,7 +16,8 @@ body{
 }
 
 #display, #operators, #numbers, #equalsClear{
-align-self: center;}
+align-self: center;
+display: flex;}
 
 button{
     padding: 20px;
@@ -34,4 +35,11 @@ button{
     align-self: stretch;
     border-radius: 20px;border-style: dashed;
     border-color: #7B0828;
+}
+
+#numbers{
+    flex-wrap: wrap;
+}
+#numbers>* {
+    flex: 1 1 120px;
 }
