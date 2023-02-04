@@ -41,6 +41,7 @@ button{
     font-family: 'Press Start 2P', cursive;
     font-size: 1em;
     height: 30px;
+    align-items: right;
 }
 
 #numbers{
